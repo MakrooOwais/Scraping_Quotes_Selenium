@@ -1,9 +1,9 @@
 from selenium import webdriver
 from pages.quotes_page import QuotesPage
 
-chrome = webdriver.Chrome('P:\\chromedriver.exe')
-chrome.get('http://quotes.toscrape.com/search.aspx')
-page = QuotesPage(chrome)
+firefox = webdriver.Firefox(executable_path = 'C:\\Users\\Owais Mohammad\\PythonProjects\\geckodriver.exe')
+firefox.get('http://quotes.toscrape.com/search.aspx')
+page = QuotesPage(firefox)
 
 author = page.ask_for_author()
 page.select_author(author_name=author)
